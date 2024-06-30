@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  */
 public class DbUtil {
 
-    private static String url = "jdbc:mysql://localhost:3306/dbcrud";
+    private static String url = "jdbc:mysql://localhost:3307/dbcrud";
     private static String user = "root";
     private static String password = "1234";
 
