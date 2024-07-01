@@ -1,10 +1,10 @@
-<jsp:useBean class="model.Student" id="s"/>
+<jsp:useBean class="model.Student" id="e"/>
 <%@page  import="dao.StudentDao" %>
-<jsp:setProperty name="s" property="*" />
+<jsp:setProperty name="e" property="*" />
 
 
 <%
-int i=StudentDao.saveStudent(s);
+int i=StudentDao.saveStudent(e);
 
     if(i>0){
         response.sendRedirect("success.jsp");

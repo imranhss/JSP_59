@@ -9,7 +9,8 @@
     <body>
         <%=new java.util.Date() %> 
         
-        <a href="studentaddform.jsp" >Add Student</a>
+        <a href="studentaddform.jsp" >Add Student</a><br>
+        <a href="viewallstudent.jsp" >View All Student</a>
         
         <h1>Hello World!</h1>
     </body>
