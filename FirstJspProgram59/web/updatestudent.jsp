@@ -4,8 +4,10 @@
 
 
 <%
+StudentDao.updateStudent(e);
+
     
-    StudentDao.deleteStudent(e);
-    response.sendRedirect("viewallstudent.jsp");
+        response.sendRedirect("success.jsp");
+   
 
 %>
