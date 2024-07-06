@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        
+        
+        All Employee
+        
+        
+        <h:dataTable var="e" value="#{employeeManageBean.showAllEmployee()}">
+            
+            <h:column >
+                <f:facet name="header"> Id</f:facet>
+                #{e.empid}                
+            </h:column>
+            
+            <h:column >
+                <f:facet name="header"> Name</f:facet>
+                #{e.name}                
+            </h:column>
+            
+            <h:column >
+                <f:facet name="header"> Email</f:facet>
+                #{e.email}                
+            </h:column>
+            
+            <h:column >
+                <f:facet name="header"> Address</f:facet>
+                #{e.address}                
+            </h:column>
+            
+            <h:column >
+                <f:facet name="header"> Cell No</f:facet>
+                #{e.cellno}                
+            </h:column>
+            
+            
+            <h:column >
+                <h:form>
+                    <h:commandButton value="Edit" action="#{employeeManageBean.editEmployee(e.empid)}" />
+                </h:form>
+
+                <h:form>
+                    <h:commandButton value="Delete" action="#{employeeManageBean.delete(e.empid)}"  onclick="return confirm('Are u Sure?')"/>
+                </h:form>
+                               
+            </h:column>
+            
+            
+            
+        </h:dataTable>
+    </h:body>
+</html>
+
